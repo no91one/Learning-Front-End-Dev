@@ -1,0 +1,539 @@
+body {
+    margin: 0px;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+
+/* Header-Section */
+
+#header {
+    height: 65vh;
+    opacity: 0.6;
+    background-image: url(https://ninjasfiles.s3.amazonaws.com/asset_0000000000000020_1549743985_macbook_mouse.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 1rem;
+}
+.bars{
+    color: white;
+    margin: 0;
+    margin-right: 5%;
+    display: none;
+}
+
+.bars i {
+    font-size: 2rem;
+}
+
+.dropdown-list{
+    margin: 0;
+    display: none;
+    background-color: #828470;
+    box-shadow: 0px 4px 8px 1px #535547;
+}
+
+.dropdown-list ul{
+    margin: 0.2rem 0.2rem;
+    text-align: left;
+    padding: 0px 0.8rem;
+}
+.dropdown-menu
+{
+    text-align: right;
+}
+.dropdown-menu:hover .dropdown-list{
+    display: block;
+    position: absolute;
+    right: 3%;
+}
+
+.dropdown-list li{
+    margin: 0.4rem 0px;
+}
+
+.no-stylelist {
+    list-style: none;
+}
+.no-stylelist li a{
+    list-style: none;
+    color: white;
+    text-decoration: none;
+}
+.no-stylelist li{
+    font-weight: 200;
+    font-size: .9rem;
+}
+.hr-list li {
+    display: inline-block;
+    margin: 0px 8px 8px 0px;
+}
+
+.hr-list li a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.nav-menu li a {
+    transition: color 0.5s;
+}
+
+.nav-menu li a:hover {
+    color: slategrey;
+    border-bottom: 1px solid whitesmoke;
+}
+
+#nme-scl-contr {
+    margin-top: 10vh;
+    text-align: center;
+}
+
+#name {
+    font-size: 3rem;
+    color: white;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.social-icons li a {
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.social-icons li a:hover {
+    box-shadow: 0px 0px 6px 4px slategray;
+}
+
+
+/* Sections */
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.section-heading {
+    width: auto;
+    padding: 20px 10px 10px;
+    font-weight: 400;
+}
+
+.section-heading span {
+    color: rgba(61, 52, 187, 0.815);
+    font-size: 40px;
+    display: inline-block;
+    padding-top: 10px;
+    margin-right: 0.5rem;
+}
+
+
+/* About Section */
+
+#about {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#about img {
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    margin-top: -17vh;
+    box-shadow: 0px 0px 6px 4px grey;
+}
+
+#about-me {
+    font-family: cursive;
+    font-size: 2rem;
+    width: 70%;
+    font-weight: 700;
+    color: cadetblue;
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+}
+
+
+/* Skills Section */
+
+.skills-display {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    /* padding: 10px; */
+    justify-content: space-evenly;
+}
+
+.skills-progress {
+    height: 2.2rem;
+    width: 11rem;
+    background-color: aliceblue;
+    border-radius: 1rem;
+    margin: 25px;
+    box-shadow: 0px 0px 6px 4px lightblue;
+    overflow: hidden;
+}
+
+.skills-progress>div {
+    border-radius: 20px 0px 0px 20px;
+    box-shadow: 1px 1px 5px 2px #989882;
+}
+
+.skill-name span {
+    color: white;
+    font-size: 1rem;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+
+/* Work Experience */
+
+#timeline {
+    width: 75%;
+    position: relative;
+}
+
+.timeline-box {
+    width: 35%;
+    min-height: 150px;
+    position: relative;
+    margin: 5px;
+    left: 5%;
+    text-align: right;
+}
+
+.timeline-box:nth-child(2n) {
+    left: 57%;
+}
+
+.timeline-logo{
+    position: absolute;
+    width: 50px;
+    overflow: hidden;
+}
+.timeline-logo>img{
+    width: 100%;
+}
+.timeline-container {
+    padding: 8px;
+}
+.timeline-box::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: lightgrey;
+    top: 22%;
+    border-radius: 50%;
+    z-index: 1;
+}
+.timeline-box:nth-child(2n+1)::after {
+    right: -29.8%;
+}
+
+.timeline-box:nth-child(2n)::after {
+    left: -23%;
+}
+
+.experience-description
+{
+    font-size: 1rem;
+    text-align: justify;
+    font-family: cursive;
+    color: burlywood;
+}
+.experience-designation {
+    font-size: 1.4rem;
+    color: blue;
+}
+
+.experience-company-name {
+    font-size: 1.2rem;
+    color: orange;
+}
+.experience-duration
+{
+    color: #9e9b9b;
+    font-weight: 100;
+    color: grey;
+    font-size: 1rem;
+}
+#timeline-divider
+{
+    position: absolute;
+    width: 0;
+    left: 50%;
+    top: 10%;
+    border: 2px dashed skyblue;
+    height: 66%;
+}
+#timeline-traveller 
+{
+    position: sticky;
+    top: 135px;
+    z-index: 2;
+   
+}
+#timeline-traveller i{
+    transform: rotate(90deg);
+    margin-top: -35px;
+    display: block;
+    color: rgb(0, 47, 255);
+
+}
+
+/* Portfolio Section */
+
+#portfolio-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 50px;
+    margin-bottom: 20px;
+    justify-content: space-evenly;
+}
+
+.portfolio-image-container {
+    max-width: 300px;
+    overflow: hidden;
+    margin: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.portfolio-image-container img {
+    height: 100%;
+    width: 100%;
+}
+
+.portfolio-details {
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    color: transparent;
+    text-align: center;
+    padding: 10px;
+}
+
+.portfolio-image-container:hover {
+    box-shadow: 0 0 20px rgb(153, 119, 184);
+}
+
+.portfolio-image-container:hover .portfolio-details {
+    background-color: rgba(146, 145, 145, 0.472);
+    color: aliceblue;
+}
+
+#contact {
+    background-color: blue;
+    background-image: linear-gradient(to right top, rgb(54, 81, 155) 0%, rgb(176, 5, 255) 75%);
+    color: aliceblue;
+    padding: 20px;
+}
+
+#contact h1 span {
+    color: #ffffff;
+}
+
+#contact-form {
+    margin-left: 20%;
+}
+
+#contact-container {
+    display: flex;
+}
+
+#contact-form-container {
+    width: 50%;
+}
+
+input,
+textarea {
+    max-width: 90%;
+    margin: 15px;
+    padding: 4px 10px;
+    border: 0px solid transparent;
+    border-bottom: 2px solid white;
+    color: #d9dcdd;
+    background: transparent;
+    width: 90%;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+button[type="submit"] {
+    background: transparent;
+    font-size: 0.95rem;
+    border: 2px solid white;
+    margin-top: 5%;
+    margin-left: 35%;
+    border-radius: 5px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.046875em;
+    line-height: 1;
+    padding: 0.8em 0.8em 0.78em;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #ffffff;
+    color: rgb(54, 81, 155);
+}
+
+#my-details-container {
+    width: 35%;
+    margin-left: 6%;
+}
+
+#my-details-container h3 {
+    color: #ffffff;
+    font-weight: 550;
+    font-size: 1.2rem;
+}
+
+#my-details-container p {
+    color: #d9dcdd;
+    font-size: 0.9rem;
+}
+
+.my-details-info-container {
+    margin-bottom: 20px;
+    color: #d9dcdd;
+    font-size: 1rem;
+}
+@media only screen and (max-width:768px)
+{
+#name
+{
+    margin-bottom: 1rem;
+}
+    .timeline-box
+    {
+        width: 80%;
+        left:12% !important;
+    }
+    /* .timeline-box:nth-child(2n) {
+        left: 12%;
+    } */
+    #timeline-divider
+    {
+        left: 6%;
+    }
+    .timeline-box::after
+    {
+        left: -11% !important;
+    }
+    #contact-container
+    {
+        width: 100%;
+        display: block;
+        flex-wrap: wrap;
+    }
+    #contact-form-container
+    {
+        width: 80%;
+        margin: 10%;
+    }
+    #my-details-container
+    {
+        width: 80%;
+        margin: 10%;
+    }
+    html
+    {
+        font-size: 15px;
+    }
+    /* .timeline-box:nth-child(2n+1)::after {
+        left: -9%;
+    }
+    .timeline-box:nth-child(2n)::after {
+        left: -9%;
+    } */
+}
+@media only screen and (max-width:572px)
+{
+    .bars{
+        display: block;
+    }
+    #big-list
+    {
+        display: none;
+    }
+    .timeline-box {
+        width: 100%;
+        left: 10% !important;
+    }
+    .timeline-box::after
+    {
+        left: -11% !important;
+    }
+    #timeline-divider
+    {
+        left:2%
+    }
+}
+/* Usecase Classes */
+
+.txt-cntr {
+    text-align: center;
+}
+
+.mgt-75px {
+    margin-top: 75px;
+}
+
+
+/* Color Classes*/
+
+.mb-blue {
+    background-color: rgba(0, 0, 255, 0.602);
+}
+
+.mb-orange {
+    background-color: rgba(255, 166, 0, 0.808);
+}
+
+.mb-purple {
+    background-color: rgba(102, 51, 153, 0.787);
+}
+
+.mb-green {
+    background-color: rgba(34, 75, 34, 0.753);
+}
+
+
+/* Percentage Classes */
+
+.seventy-five-percent {
+    width: 75%;
+    height: inherit;
+}
+
+.fifty-five-percent {
+    width: 55%;
+    height: inherit;
+}
+
+.forty-five-percent {
+    width: 45%;
+    height: inherit;
+}
+
+.eighty-five-percent {
+    width: 85%;
+    height: inherit;
+}
