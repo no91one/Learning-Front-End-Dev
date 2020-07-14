@@ -1,0 +1,398 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    font-family: cursive;
+    background-color: rgb(4, 4, 29);
+    color: aliceblue;
+}
+/* Navigation-bar */
+header
+{
+    padding: 1em;
+    padding-top: 0.5em;
+    background-color: transparent;
+}
+nav
+{
+    width: 100%;
+    height: 5em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: aliceblue;
+    background-color:rgb(4, 4, 29) ;
+    position: fixed;
+    z-index: 10;
+}
+#logo
+{
+    height: 100%;
+    width: 5em;
+    display: flex;
+    flex-direction: row;
+}
+#logo img{
+    height: 100%;
+    width: 100%;
+}
+#logo h1{
+    margin-top: 25%;
+    margin-left: 10%;
+}
+#basics
+{
+    margin-left: 10%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    color: ;
+}
+#basics h3{
+    margin-left: 15%;
+}
+#searchbar
+{
+    width: 15.5em;
+    height: 1.5em;
+    background-color:rgb(17, 17, 77);
+    border-radius: 1em;
+    margin-left: 37%;
+    margin-right: 8%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    padding-left: .5em;
+    padding-right: 0.5em;
+}
+#search
+{
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 0.5em;
+    color: aliceblue;
+}
+#searchbar input{
+    width: 14.5em;
+    height: 1.8em;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+}
+#mic
+{
+    width: 1.5em;
+    height: 1.5em;
+    color: aliceblue;
+}
+#profile
+{
+    height: 100%;
+    width: 5em;
+}
+#profile img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+/* Main-Section */
+main{
+    margin-top: 10%;
+    width: 65vw;
+    height: auto;
+    display: inline-block;
+    margin-left: 7%;
+}
+.section
+{
+    margin-left: 7%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+  /* Banners */
+    #trending
+    {
+        width: auto;
+        /* background-color: aquamarine; */
+        position: relative;
+        padding: 2em;
+        margin-left: 7%;
+    }
+    .banner
+    {
+        height: 28vh;
+        width: 25vw;
+        /* background-color: brown; */
+        display: inline-block;
+        border-radius: 1em;
+        box-shadow:0px 0px 6px 5px beige;
+        transition: 0.5s ease-in-out;
+    }
+    #first
+    {
+        position: relative;
+        background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7bf6675c-6d5c-4970-b9e0-196f94fa76df/d55clc9-cabd6812-768d-48a4-acc4-a949b9a82712.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvN2JmNjY3NWMtNmQ1Yy00OTcwLWI5ZTAtMTk2Zjk0ZmE3NmRmXC9kNTVjbGM5LWNhYmQ2ODEyLTc2OGQtNDhhNC1hY2M0LWE5NDliOWE4MjcxMi5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.K3oB0Oj1yEBTHE3SQmnnpLKV83CYSEqkB5FWsAFd_gU);
+        background-size: cover;
+        background-position: center;
+    }
+    #first:hover,#second:hover,#third:hover
+    {
+        transform:scale(1.2);
+        z-index: 2;
+    }
+    #second
+    {
+        margin-left: -30%;
+        transform: scale(1.1);
+        background-image: url(https://assets.popbuzz.com/2016/06/twenty-one-pilots-1455106940-list-handheld-0.jpg);
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+        position: relative;
+    }
+    #third
+    {
+        margin-left: -30%;
+        position: relative;
+        background-image: url(https://i.ytimg.com/vi/D4OXbWoMNWc/maxresdefault.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    /* Latest-Releases */
+ main{
+        margin-top: 10%;
+        width: 65vw;
+        height: auto;
+        display: inline-block;
+        margin-left: 3%;
+        margin-right: 8%;
+    }
+    .sec-heading
+{
+    margin-bottom: 1%;
+    color: white;
+}
+.sec-content
+{
+   height: auto;
+   width: auto; 
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+}
+    #latest-release
+    {
+        margin-top: 2%;
+        width: auto;
+        height: auto;
+        margin-left: 7%;
+    }
+    .latest-song
+    {
+        width: 20em;
+        height: 6em;
+        display: flex;
+        margin-left: 2%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+    .latest-song img{
+        height: 5em;
+        width: 5em;
+        border-radius: 0.5em;
+        margin-top: 2.5%;
+        margin-left: 2.5%;
+        box-shadow: 0px 0px 5px 5px rgb(97, 172, 202);
+    }
+    .latest-song ul{
+        list-style: none;
+    }
+    .latest-song #song-info
+    {
+        margin-left: 5%;
+        margin-top: 10%;
+    }
+    .latest-song #song-duration
+    {
+        margin-left: 35%;
+    }
+    .latest-song #song-duration i{
+        font-size: 30px;
+    }
+    /* Popular-Artists */
+    
+    .artist
+    {
+        height: 7em;
+        width: 7em;
+        display: inline-block;
+        margin-top: 5%;
+        text-align: center;
+    }
+    .artist img{
+        height: 5em;
+        width: 5em;
+        border-radius: 0.5em;
+    }
+    /* Genres */
+        #song-genres
+    {
+        background-color: rgb(7, 7, 47);
+        width: 55vw;
+        padding: 2px;
+    }
+    #icon img
+    {
+       height: 6em;
+       width: 6em;
+        border-radius: 50%;
+        transition: 1s ease-in-out;
+    
+    }
+    .genre 
+    {
+        height: 5em;
+        width: 5em;
+        margin-left: 3%;
+        margin-top: 2.5%;
+        position: relative;
+    }
+    .genre h5{
+        position: absolute;
+        left: 25%;
+        top: 40%;
+    }
+    .genre img
+    {
+        height:100%;
+        width: 100%;
+        border-radius: 50%;
+        opacity: 0.5;
+        transition: 1s ease-in-out;
+        margin-left: 3%;
+        margin-top: 1%;
+    }
+    /* Mood */
+        .mood
+    {
+        width: 14em;
+        height: 7em;
+        /* background-color: blueviolet; */
+        margin-left: 1%;
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+    }
+    .mood img{
+        height: 100%;
+        width: 100%;
+        transition: 1s ease-in-out;
+        opacity: 0.6;
+    }
+    .mood img:hover
+    {
+        transform: scale(1.5);
+    }
+    .mood h4{
+        position: absolute;
+        left: 35%;
+        top: 40%;
+    }
+    .e-song
+    {
+        height: 6em;
+        width: 6em;
+        display: inline-block;
+        margin-top: 5%;
+        margin-left: 2.5%;
+        text-align: center;
+    }
+    .h-song
+    {
+        height: 6em;
+        width: 6em;
+        display: inline-block;
+        margin-top: 5%;
+        margin-left: 2.5%;
+        text-align: center;
+    }
+    .song-image{
+        height: 100%;
+        width: 100%;
+        border-radius: 0.5em;
+        box-shadow:  0px 0px 4px 4px rgb(191, 191, 246);;
+    }
+/* Aside-section */
+aside{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10%;
+    width: 20vw;
+    height: 80vh;
+    overflow-y: scroll;
+position: fixed;
+}
+aside::-webkit-scrollbar
+{
+    display: none;
+}
+    /* Playlist */
+    #Playlist
+    {
+        width: 15vw;
+        height: 80vh;
+
+    }
+    #Playlist .sec-heading
+    {
+        margin-bottom: 8%;
+    }
+    #Playlist ul
+    {
+        list-style: none;
+    }
+    .my-song 
+    {
+        width: 100%;
+        height: 6em;
+        display: flex;
+        margin-left: 2%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        text-align: center;
+    }
+    .my-song img{
+        width: 3em;
+        height: 3em;
+        border-radius: 0.5em;
+        box-shadow: 0px 0px 4px 4px rgb(171, 171, 240);
+    }
+    .my-song ul{
+        list-style: none;
+    }
+    .my-song #song-info
+    {
+        margin-left: 10%;
+        margin-top: 0%;
+    }
+    .my-song #song-duration
+    {
+        margin-left: 35%;
+    }
+    .my-song #song-duration i{
+        font-size: 30px;
+    }
+    .my-song h5{
+        font-size: 10px;
+    }
+    .my-song h6{
+        font-size: 9px;
+    }
+    .my-song i{
+        font-size: 10px;
+    }
