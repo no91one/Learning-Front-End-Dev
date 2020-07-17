@@ -14,7 +14,7 @@ body{
 header
 {
     padding: 1em;
-    padding-top: 0.5em;
+    padding-top: 0;
     background-color: transparent;
 }
 nav
@@ -23,7 +23,7 @@ nav
     height: 5em;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     color: aliceblue;
     background-color:rgb(4, 4, 29) ;
     position: fixed;
@@ -50,7 +50,6 @@ nav
     margin-top: 2%;
     display: flex;
     flex-direction: row;
-    color: ;
 }
 #basics h3{
     margin-left: 15%;
@@ -98,14 +97,39 @@ nav
     height: 100%;
     width: 100%;
     border-radius: 50%;
+    border: 1px solid black;
+    box-shadow:0px 0px 6px 5px rgb(22, 4, 100);
 }
 /* Main-Section */
-main{
-    margin-top: 10%;
-    width: 65vw;
-    height: auto;
-    display: inline-block;
-    margin-left: 7%;
+#content
+     {
+        margin-top: 10%;
+         margin-bottom: 5%;
+         height: auto;
+         width: auto;
+         position: relative;
+         display: flex;
+     }
+ main{
+        width: 65vw;
+        height: auto;
+        display: inline-block;
+        margin-left: 3%;
+        margin-right: 8%;
+        position: sticky;
+    }
+    .sec-heading
+{
+    margin-bottom: 1%;
+    color: white;
+}
+.sec-content
+{
+   height: auto;
+   width: auto; 
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
 }
 .section
 {
@@ -113,7 +137,41 @@ main{
     margin-top: 5%;
     margin-bottom: 5%;
 }
-
+/* Usecase Classes */
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.relative
+{
+    position: relative;
+    
+}
+.relative:hover .play
+{
+    background-color: rgba(146, 145, 145, 0.472);
+    color: aliceblue;
+    border-radius: 1em;
+}
+.play
+{
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: transparent;
+    text-align: center;
+    padding: 10px;
+    /* display: none; */
+}
+.play i{
+    height: 10%;
+    width: 10%;
+    position: relative;
+    /* top: 40%; */
+}
   /* Banners */
     #trending
     {
@@ -132,13 +190,17 @@ main{
         border-radius: 1em;
         box-shadow:0px 0px 6px 5px beige;
         transition: 0.5s ease-in-out;
+        position: relative;
+    }
+    .banner img
+    {
+        height: 100%;
+        width: 100%;
+        border-radius: 1em;
     }
     #first
     {
         position: relative;
-        background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7bf6675c-6d5c-4970-b9e0-196f94fa76df/d55clc9-cabd6812-768d-48a4-acc4-a949b9a82712.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvN2JmNjY3NWMtNmQ1Yy00OTcwLWI5ZTAtMTk2Zjk0ZmE3NmRmXC9kNTVjbGM5LWNhYmQ2ODEyLTc2OGQtNDhhNC1hY2M0LWE5NDliOWE4MjcxMi5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.K3oB0Oj1yEBTHE3SQmnnpLKV83CYSEqkB5FWsAFd_gU);
-        background-size: cover;
-        background-position: center;
     }
     #first:hover,#second:hover,#third:hover
     {
@@ -149,9 +211,6 @@ main{
     {
         margin-left: -30%;
         transform: scale(1.1);
-        background-image: url(https://assets.popbuzz.com/2016/06/twenty-one-pilots-1455106940-list-handheld-0.jpg);
-        background-size: cover;
-        background-position: center;
         z-index: 1;
         position: relative;
     }
@@ -159,32 +218,9 @@ main{
     {
         margin-left: -30%;
         position: relative;
-        background-image: url(https://i.ytimg.com/vi/D4OXbWoMNWc/maxresdefault.jpg);
-        background-size: cover;
-        background-position: center;
     }
     /* Latest-Releases */
- main{
-        margin-top: 10%;
-        width: 65vw;
-        height: auto;
-        display: inline-block;
-        margin-left: 3%;
-        margin-right: 8%;
-    }
-    .sec-heading
-{
-    margin-bottom: 1%;
-    color: white;
-}
-.sec-content
-{
-   height: auto;
-   width: auto; 
-   display: flex;
-   flex-wrap: wrap;
-   flex-direction: row;
-}
+     
     #latest-release
     {
         margin-top: 2%;
@@ -212,16 +248,16 @@ main{
     .latest-song ul{
         list-style: none;
     }
-    .latest-song #song-info
+    .latest-song .song-info
     {
         margin-left: 5%;
         margin-top: 10%;
     }
-    .latest-song #song-duration
+    .latest-song .song-duration
     {
         margin-left: 35%;
     }
-    .latest-song #song-duration i{
+    .latest-song .song-duration i{
         font-size: 30px;
     }
     /* Popular-Artists */
@@ -293,6 +329,7 @@ main{
         width: 100%;
         transition: 1s ease-in-out;
         opacity: 0.6;
+        position: absolute;
     }
     .mood img:hover
     {
@@ -331,21 +368,86 @@ main{
 aside{
     display: inline-block;
     vertical-align: top;
-    margin-top: 10%;
-    width: 20vw;
-    height: 80vh;
+    top: 25%;
+    width: 15vw;
+    height: 25em;
     overflow-y: scroll;
-position: fixed;
+   position: sticky;
 }
 aside::-webkit-scrollbar
 {
     display: none;
+}
+#playlist-queue
+{
+    position: relative;
 }
     /* Playlist */
     #Playlist
     {
         width: 15vw;
         height: 80vh;
+        position: relative;
+    }
+    /* Dropdown */
+    .dropbtn
+    {
+        background-color:transparent;
+        border: 1px solid white;
+        width: 70px;
+        border-radius: 0.3em;
+        color: aliceblue;
+        position: absolute;
+        z-index: 2;
+    }
+    .dropbtn:hover {
+        background-color: #ffffff;
+        color: rgb(54, 81, 155);
+    }
+    .dropdown
+    {
+        position: absolute;
+        top: 1%;
+        right: 38%;
+        color: aliceblue;
+    }
+    .dropdown-content{
+        display: none;
+        position: absolute;
+        min-width: 50px;
+        background-color:rgb(4, 4, 29);;
+        box-shadow: 0px 0px 6px 6px beige;
+        z-index: 3;
+    }
+    .dropdown-content a {
+        color: aliceblue;
+        padding: 5px 6px;
+        text-decoration: none;
+        display: block;
+      }
+      .dropdown-content a:hover {background-color:rgb(17, 17, 73);}
+
+        .dropdown:hover .dropdown-content {display: block;}
+
+        .dropdown:hover .dropbtn {background-color: rgb(4, 4, 29);}
+    /*Queue  */
+    #queue
+    {
+        height: 0;
+        width: 0;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+    }
+    #queue:target
+    {
+
+        width: 15vw;
+        height: 80vh;
+        position: absolute;
+        background-color: rgb(4, 4, 29);
+        transition:all 0.5s ease-in-out;
+        top: 0;
 
     }
     #Playlist .sec-heading
@@ -359,10 +461,10 @@ aside::-webkit-scrollbar
     .my-song 
     {
         width: 100%;
-        height: 6em;
+        height: auto;
         display: flex;
         margin-left: 2%;
-        margin-top: 1%;
+        margin-top: 10%;
         margin-bottom: 1%;
         text-align: center;
     }
@@ -375,17 +477,16 @@ aside::-webkit-scrollbar
     .my-song ul{
         list-style: none;
     }
-    .my-song #song-info
+    .my-song .song-info
     {
-        margin-left: 10%;
+        width: 6em;
+        margin-left: 3%;
         margin-top: 0%;
     }
-    .my-song #song-duration
+    .my-song .song-duration
     {
-        margin-left: 35%;
-    }
-    .my-song #song-duration i{
-        font-size: 30px;
+        margin-left: 10%;
+        font-size: 10px;
     }
     .my-song h5{
         font-size: 10px;
@@ -396,3 +497,94 @@ aside::-webkit-scrollbar
     .my-song i{
         font-size: 10px;
     }
+
+/* Animations */
+@keyframes Slide
+{
+    from
+    {
+        transform: translateX(0);
+    }
+    to
+    {
+        transform: translateX(-5em);
+    }
+}
+/* Player */
+#footer
+{
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+}
+#footer:target
+{
+    position: fixed;
+    width: 100%;
+    height: 6em;
+    background-image: url(images/Audio-Player.png);
+    background-position: center;
+    background-size: cover;
+    bottom: 0;
+    /* display: none; */
+}
+#player-image
+{
+    height: 100%;
+    width: 100%;
+}
+#player
+{
+    position: relative;
+}
+#play-logo
+{
+    height: 6em;
+    width: 12em;
+    overflow-x: scroll;
+    margin-left: 2%;
+    display: inline-block;
+    /* background-color:rgb(4, 4, 29)  ; */
+    position: absolute;
+}
+#play-logo::-webkit-scrollbar
+{
+    display: none;
+}
+.playing-song img{
+    height: 5em;
+    width: 5em;
+    border-radius: 0.5em;
+    margin-top: 3%;
+    margin-left: 3%;
+    box-shadow: 0px 0px 5px 5px rgb(97, 172, 202);
+    z-index: 1;
+}
+.playing-song ul{
+    list-style: none;
+    margin-left: 10%;
+        margin-top: 20%;
+}
+.playing-song 
+{
+    display: flex;
+    flex-direction: row;
+    
+}
+.playing-song .song-info
+{
+    animation: Slide  4s ease-in-out infinite;
+}
+#terminator
+{
+    position: absolute;
+    margin-left:98%;
+    color: aliceblue;
+    text-align: center;
+    height: auto;
+    width: auto;
+    display: inline-block;
+    font-size: 13px;
+}
