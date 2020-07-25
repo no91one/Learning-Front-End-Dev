@@ -481,6 +481,17 @@ nav
     }
     #banner .description
     {
-       transform:scale(0.8);
+        height: 100%;
+        font-size: 65%;
+        transform: scale(0.9);
+    }
+}
+@media screen and (max-width:330px)
+{
+    #banner .description
+    {
+        /* height: 100%;
+        font-size: 55%; */
+        transform: scale(0.75);
     }
 }
