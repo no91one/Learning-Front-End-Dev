@@ -236,14 +236,27 @@ a{
         margin-left: 2%;
         margin-top: 1%;
         margin-bottom: 1%;
+        position: relative;
     }
-    .latest-song img{
+    .latest-song .image-play{
         height: 5em;
         width: 5em;
         border-radius: 0.5em;
         margin-top: 2.5%;
         margin-left: 2.5%;
         box-shadow: 0px 0px 5px 5px rgb(97, 172, 202);
+    }
+    .image-play img
+    {
+        height: 100%;
+        width: 100%;
+        border-radius: 0.5em;
+    }
+    .image-play:hover .play
+    {
+        height: 100%;
+        width: 100%;
+        border-radius: 0.5em;
     }
     .latest-song ul{
         list-style: none;
@@ -259,6 +272,76 @@ a{
     }
     .latest-song .song-duration i{
         font-size: 30px;
+    }
+    .dropmenu
+    {
+        height: 0;
+        width: 0;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+    }
+    #dropmenu_1:target
+    {
+
+        width: 8em;
+        height: 8em;
+        position: absolute;
+        background-color: white;
+        color: black;
+        transition:all 0.5s ease-in-out;
+        top: 1.7em;
+        right: 2em;
+        font-size: 0.8em;
+    }
+    #dropmenu_2:target
+    {
+
+        width: 8em;
+        height: 8em;
+        position: absolute;
+        background-color: white;
+        color: black;
+        transition:all 0.5s ease-in-out;
+        top: 1.7em;
+        right: 2em;
+        font-size: 0.8em;
+    }
+    #dropmenu_3:target
+    {
+
+        width: 8em;
+        height: 8em;
+        position: absolute;
+        background-color: white;
+        color: black;
+        transition:all 0.5s ease-in-out;
+        top: 1.7em;
+        right: 2em;
+        font-size: 0.8em;
+    }
+    #dropmenu_4:target
+    {
+
+        width: 8em;
+        height: 8em;
+        position: absolute;
+        background-color: white;
+        color: black;
+        transition:all 0.5s ease-in-out;
+        top: 1.7em;
+        right: 2em;
+        font-size: 0.8em;
+    }
+    .dropmenu li img{
+        height: 12px;
+        width: 12px;
+        margin-right: 5px;
+    }
+    #close
+    {
+        color: red;
+        transform: rotate(45deg);
     }
     /* Popular-Artists */
     
@@ -276,11 +359,10 @@ a{
         border-radius: 0.5em;
     }
     /* Genres */
-        #song-genres
+        #song-genres .sec-content
     {
         background-color: rgb(7, 7, 47);
-        width: 55vw;
-        padding: 2px;
+        width: auto;
     }
     #icon img
     {
@@ -294,7 +376,7 @@ a{
     {
         height: 5em;
         width: 5em;
-        margin-left: 3%;
+        margin-left: 5%;
         margin-top: 2.5%;
         position: relative;
     }
@@ -369,7 +451,7 @@ aside{
     display: inline-block;
     vertical-align: top;
     top: 25%;
-    width: 15vw;
+    width: 16vw;
     height: 25em;
     overflow-y: scroll;
    position: sticky;
@@ -522,8 +604,8 @@ aside::-webkit-scrollbar
 #footer:target
 {
     position: fixed;
-    width: 100%;
-    height: 6em;
+    width: 100vw;
+    height: 4em;
     background-image: url(images/Audio-Player.png);
     background-position: center;
     background-size: cover;
@@ -541,7 +623,7 @@ aside::-webkit-scrollbar
 }
 #play-logo
 {
-    height: 6em;
+    height: 4em;
     width: 12em;
     overflow-x: scroll;
     margin-left: 2%;
@@ -554,8 +636,8 @@ aside::-webkit-scrollbar
     display: none;
 }
 .playing-song img{
-    height: 5em;
-    width: 5em;
+    height: 3.5em;
+    width: 3.5em;
     border-radius: 0.5em;
     margin-top: 3%;
     margin-left: 3%;
@@ -576,6 +658,7 @@ aside::-webkit-scrollbar
 .playing-song .song-info
 {
     animation: Slide  4s ease-in-out infinite;
+    margin-top: 12%;
 }
 #terminator
 {
@@ -587,4 +670,114 @@ aside::-webkit-scrollbar
     width: auto;
     display: inline-block;
     font-size: 13px;
+}
+@media screen and (max-width:992px)
+{
+    main
+    {
+        margin-right: 3%;
+    }
+    aside
+    {
+        top: 25%;
+    width: 20vw;
+    height: 30em;
+    }
+    aside .my-song
+    {
+        width: 100%;
+       
+    }
+    .sec-content
+    {
+        width:40vw
+    }
+    .banner
+    {
+        height: 30vh;
+        width: 28vw;
+    }
+}
+@media screen and (max-width:885px)
+{
+    aside
+    {
+        display: none;
+    }
+    main
+    {
+        width: 100%;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+    #content
+    {
+        width: 100%;
+        transform: scale(0.95);
+    }
+    .sec-content
+    {
+        width:100vw;
+    }
+    #trending
+    {
+        margin-left: 0%;
+    }
+    .banner
+    {
+        height: 30vh;
+        width: 50%;
+        display: inline-block;
+        margin-left: 20%;
+    }
+    #second
+    {
+        margin-top: -30%;
+        transform: scale(1.1);
+        z-index: 1;
+        position: relative;
+        margin-left: 20%;
+    }
+    #third
+    {
+        margin-top: -30%;
+        position: relative;
+        margin-left: 20%;
+    }
+    
+}
+@media screen and (max-width:500px)
+{
+    .banner
+    {
+        height: 30vh;
+        width: 100%;
+        display: block;
+        margin-left: 0%;
+    }
+    #second
+    {
+        margin-top: -40%;
+        transform: scale(1.1);
+        z-index: 1;
+        position: relative;
+        margin-left: 0%;
+    }
+    #third
+    {
+        margin-top: -40%;
+        position: relative;
+        margin-left: 0%;
+    }
+    .mood
+    {
+        width: 90%;
+        height: 9em;
+        /* background-color: blueviolet; */
+        margin-left: 1%;
+        margin-top: 1%;
+        display: block;
+        overflow: hidden;
+        position: relative;
+    }
 }
