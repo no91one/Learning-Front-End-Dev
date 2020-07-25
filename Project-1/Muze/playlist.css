@@ -1,0 +1,490 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    font-family: cursive;
+    background-color: rgb(4, 4, 29);
+    color: aliceblue;
+}
+/* Navigation-bar */
+header
+{
+    padding: 1em;
+    padding-top: 0;
+    background-color: transparent;
+}
+nav
+{
+    width: 100%;
+    height: 5em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    color: aliceblue;
+    background-color:rgb(4, 4, 29) ;
+    position: fixed;
+    z-index: 10;
+}
+#logo
+{
+    height: 100%;
+    width: 5em;
+    display: flex;
+    flex-direction: row;
+}
+#logo img{
+    height: 100%;
+    width: 100%;
+}
+#logo h1{
+    margin-top: 25%;
+    margin-left: 10%;
+}
+#basics
+{
+    margin-left: 10%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+}
+#basics h3{
+    margin-left: 15%;
+}
+#searchbar
+{
+    width: 15.5em;
+    height: 1.5em;
+    background-color:rgb(17, 17, 77);
+    border-radius: 1em;
+    margin-left: 37%;
+    margin-right: 8%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    padding-left: .5em;
+    padding-right: 0.5em;
+}
+#search
+{
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 0.5em;
+    color: aliceblue;
+}
+#searchbar input{
+    width: 14.5em;
+    height: 1.8em;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+}
+#mic
+{
+    width: 1.5em;
+    height: 1.5em;
+    color: aliceblue;
+}
+#profile
+{
+    height: 100%;
+    width: 5em;
+}
+#profile img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid black;
+    box-shadow:0px 0px 6px 5px rgb(22, 4, 100);
+}
+/* Main */
+#content
+     {
+        margin-top: 10%;
+         margin-bottom: 5%;
+         height: 80vh;
+         width:90%;
+         position: relative;
+         display: flex;
+         overflow: hidden;
+     }
+ main{
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        margin-left: 7%;
+        margin-right: 5%;
+        position: sticky;
+        overflow-y: scroll;
+    }
+    main::-webkit-scrollbar
+    {
+        display: none;
+    }
+    ul{
+        list-style: none;
+    }
+    .relative
+{
+    position: relative;
+    
+}
+.relative:hover .play
+{
+    background-color: rgba(146, 145, 145, 0.287);
+    color: aliceblue;
+    border-radius: 0.5em;
+}
+#playlist-songs
+{
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+}
+.play
+{
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: transparent;
+    text-align: center;
+    padding: 0.7em;
+    /* display: none; */
+}
+.play i{
+    height: 10%;
+    width: 10%;
+    position: relative;
+    /* top: 40%; */
+}
+    /* Banner */
+    #banner
+    {
+        width: 100%;
+        height: 75%;
+        background-color: rgb(8, 8, 49);
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    #banner-image
+    {
+       width:45% ;
+       height: 100%;
+       background-image:radial-gradient(ellipse at top, rgba(245, 245, 250, 0), rgb(8, 8, 49) 80%),url(images/coldplay.png);
+       background-position: center;
+       background-size: cover;
+       overflow: hidden;
+       opacity: 0.8;
+       position: absolute;
+       z-index: 1;
+    }
+    .description
+    {
+        margin-top: 5%;
+        left: 50%;
+        width: 50%;
+        height: 20%;
+        font-size: 80%;
+        text-align: left;
+        position: relative;
+    }
+    #buttons
+    {
+        position: relative;
+        margin-top: 15%;
+    }
+    #buttons button{
+        margin-left: 5%;
+        background-color: blueviolet;
+        color: aliceblue;
+        border: none;
+        padding: 0.5em;
+    }
+    .sub-sec
+    {
+        margin-bottom: 3%;
+    }
+    /* Playlist-songs */
+    #playlist-songs{
+        width: 100%;
+        height: auto;
+        margin-top: 2%;
+    }
+    .song
+    {
+        height: 3.5em;
+        width: 100%;
+        margin-bottom: 1%;
+        background-color: rgba(76, 71, 71, 0.198);
+        border-radius: 0.3em;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    .song:hover{
+        background-color: rgba(76, 71, 71, 0.472);
+    }
+    .song .image-play
+    {
+        position: relative;
+        height: 3em;
+        width: 3em;
+        top: 10%;
+        left: 2em;
+        border-radius: 0.5em;
+        box-shadow: 0px 0px 3px 3px rgb(108, 18, 122);
+    }
+    .image-play img
+    {
+        
+        height: 3em;
+        width: 3em;
+        border-radius: 0.5em;
+        box-shadow: 0px 0px 3px 3px rgb(108, 18, 122);
+    }
+    .srno{
+        position: relative;
+        top: 40%;
+        left: 2%;
+    }
+    .song-info
+    {
+        position: relative;
+        margin-left: 5%;
+        top: 20%;
+        font-size: 0.8em;
+    }
+    /* Aside Section */
+    aside{
+        display: inline-block;
+        vertical-align: top;
+        top: 22%;
+        width: 25%;
+        height: 40em;
+        overflow-y: scroll;
+        position: sticky;
+    }
+    aside::-webkit-scrollbar
+    {
+        display: none;
+    }
+        /* Playlist */
+        #related
+        {
+            width: 17vw;
+            height: 38vh;
+            position: relative;
+            overflow-y: scroll;
+        }
+        #related::-webkit-scrollbar
+        {
+            display: none;
+        }
+        .my-song 
+    {
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin-left: 2%;
+        margin-top: 10%;
+        margin-bottom: 1%;
+        text-align: center;
+    }
+    .my-song img{
+        width: 3em;
+        height: 3em;
+        border-radius: 0.5em;
+        box-shadow: 0px 0px 4px 4px rgb(171, 171, 240);
+    }
+    .my-song ul{
+        list-style: none;
+    }
+    .my-song .song-info
+    {
+        width: 6em;
+        margin-left: 3%;
+        margin-top: 0%;
+    }
+    .my-song .song-duration
+    {
+        margin-left: 10%;
+        font-size: 10px;
+    }
+    .my-song h5{
+        font-size: 10px;
+    }
+    .my-song h6{
+        font-size: 9px;
+    }
+    .my-song i{
+        font-size: 10px;
+    }
+    #recent .my-song img
+    {
+        height: 2em;
+        width: 2em;
+    }
+    #recent
+    {width: 17vw;
+        height: 40vh;
+        position: relative;
+        overflow-y: scroll;
+    }
+    #recent::-webkit-scrollbar
+    {
+        display: none;
+    }
+    
+    /* Animations */
+@keyframes Slide
+{
+    from
+    {
+        transform: translateX(0);
+    }
+    to
+    {
+        transform: translateX(-5em);
+    }
+}
+/* Player */
+#footer
+{
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+}
+#footer:target
+{
+    position: fixed;
+    width: 100%;
+    height: 4em;
+    background-image: url(images/Audio-Player.png);
+    background-position: center;
+    background-size: cover;
+    bottom: 0;
+    /* display: none; */
+}
+#player-image
+{
+    height: 100%;
+    width: 100%;
+}
+#player
+{
+    position: relative;
+}
+#play-logo
+{
+    height: 4em;
+    width: 12em;
+    overflow-x: scroll;
+    margin-left: 2%;
+    display: inline-block;
+    /* background-color:rgb(4, 4, 29)  ; */
+    position: absolute;
+}
+#play-logo::-webkit-scrollbar
+{
+    display: none;
+}
+.playing-song img{
+    height: 3.5em;
+    width: 3.5em;
+    border-radius: 0.5em;
+    margin-top: 3%;
+    margin-left: 3%;
+    box-shadow: 0px 0px 5px 5px rgb(97, 172, 202);
+    z-index: 1;
+}
+.playing-song ul{
+    list-style: none;
+    margin-left: 10%;
+        margin-top: 20%;
+}
+.playing-song 
+{
+    display: flex;
+    flex-direction: row;
+    
+}
+.playing-song .song-info
+{
+    animation: Slide  4s ease-in-out infinite;
+    margin-top: 12%;
+}
+#terminator
+{
+    position: absolute;
+    margin-left:98%;
+    color: aliceblue;
+    text-align: center;
+    height: auto;
+    width: auto;
+    display: inline-block;
+    font-size: 13px;
+}
+@media screen and (max-width:992px)
+{
+    aside
+    {
+        height:auto;
+        width: auto;
+        margin-left: 5%;
+        position: relative;
+    }
+    #content
+    {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-right: 3%;
+    }
+    #recent
+    {
+        display: inline-block;
+        margin-left: 5%;
+        width: 40%;
+        height: 100%;
+        font-size: smaller;
+    }
+    #related
+    {
+        display: inline-block;
+        margin-left: 5%;
+        width: 40%;
+        height: 100%;
+        font-size: smaller;
+    }
+    .my-song
+    {
+        
+    }
+}
+@media screen and (max-width:500px)
+{
+    #banner
+    {
+        height: 40vh;
+    }
+    #banner .description
+    {
+        height: 100%;
+        font-size: 60%;
+    }
+}
