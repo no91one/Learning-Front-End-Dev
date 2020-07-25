@@ -471,10 +471,7 @@ nav
         height: 100%;
         font-size: smaller;
     }
-    .my-song
-    {
-        
-    }
+    
 }
 @media screen and (max-width:500px)
 {
@@ -484,7 +481,6 @@ nav
     }
     #banner .description
     {
-        height: 100%;
-        font-size: 60%;
+       transform:scale(0.8);
     }
 }
