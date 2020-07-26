@@ -9,6 +9,7 @@ body{
     font-family: cursive;
     background-color: rgb(4, 4, 29);
     color: aliceblue;
+    margin: 0;
 }
 /* Navigation-bar */
 header
@@ -19,15 +20,21 @@ header
 }
 nav
 {
-    width: 100%;
+    width: 100vw;
     height: 5em;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     color: aliceblue;
     background-color:rgb(4, 4, 29) ;
     position: fixed;
     z-index: 10;
+}
+#nav-content
+{
+    width: 100%;
+    height: 5em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
 }
 #logo
 {
@@ -35,6 +42,8 @@ nav
     width: 5em;
     display: flex;
     flex-direction: row;
+    /* flex-wrap: wrap; */
+    position: relative;
 }
 #logo img{
     height: 100%;
@@ -46,27 +55,28 @@ nav
 }
 #basics
 {
-    margin-left: 10%;
+  left: 8%;
     margin-top: 2%;
     display: flex;
     flex-direction: row;
+    position: relative;
 }
 #basics h3{
     margin-left: 15%;
 }
 #searchbar
 {
-    width: 15.5em;
+    width: auto;
     height: 1.5em;
     background-color:rgb(17, 17, 77);
     border-radius: 1em;
-    margin-left: 37%;
-    margin-right: 8%;
+    left: 37%;
     margin-top: 2%;
     display: flex;
     flex-direction: row;
     padding-left: .5em;
     padding-right: 0.5em;
+    position: relative;
 }
 #search
 {
@@ -92,6 +102,8 @@ nav
 {
     height: 100%;
     width: 5em;
+    left: 42%;
+    position: relative;
 }
 #profile img{
     height: 100%;
@@ -106,10 +118,10 @@ nav
         margin-top: 10%;
          margin-bottom: 5%;
          height: 80vh;
-         width:90%;
+         width:95%;
          position: relative;
          display: flex;
-         overflow: hidden;
+         
      }
  main{
         width: 100%;
@@ -363,7 +375,7 @@ nav
 {
     height: 0;
     width: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: fixed;
     bottom: 0;
 }
@@ -437,8 +449,24 @@ nav
     display: inline-block;
     font-size: 13px;
 }
-@media screen and (max-width:992px)
-{
+
+@media screen and (max-width:1050px)
+{   
+    #basics
+    {
+        margin-top: 3%;
+    }
+    #searchbar
+    {
+        left: 25%;
+        margin-top: 3%;
+    }
+   
+    #profile
+    {
+        left: 35%;
+    }
+
     aside
     {
         height:auto;
@@ -454,6 +482,7 @@ nav
         flex-direction: column;
         flex-wrap: wrap;
         margin-right: 3%;
+        margin-left: 0;
     }
     #recent
     {
@@ -471,8 +500,72 @@ nav
         height: 100%;
         font-size: smaller;
     }
-    
+    aside
+    {
+        display: none;
+    }
+   .song-info
+   {
+       margin-left: 12%;
+   }
 }
+@media screen and (max-width:885px)
+{
+    #logo
+    {
+        position: relative;
+        left: 5%;
+    }
+    #basics
+    {
+        display: none;
+    }
+    #searchbar
+    {
+        left: 20%;
+        margin-top: 3%;
+    }
+   
+    #profile
+    {
+        left: 32%;
+    }
+}
+@media screen and (max-width:620px)
+{
+    #logo
+    {
+        position: relative;
+        left: 5%;
+    }
+    #basics
+    {
+        display: none;
+    }
+    #searchbar
+    {
+        left: 30%;
+        margin-top: 8%;
+        background-color: transparent;
+    }
+    #searchbar input
+    {
+        display: none;
+    }
+    #search
+    {
+        width: 3em;
+        height: 3em;
+    }
+    #mic
+    {
+        display: none;
+    }
+    #profile
+    {
+        left: 30%;
+    }
+}            
 @media screen and (max-width:500px)
 {
     #banner
